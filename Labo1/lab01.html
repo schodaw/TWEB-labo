@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TWEB Lab 01</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/sticky-footer.css" rel="stylesheet">
+      
+  </head>
+  <body>
+      <div class="container theme-shocase" role="main">
+        <h1>Playing with JavaScript and Libraries</h1>
+
+        <ul>
+            <li>
+                When you move the mouse, the coordinates should be displayed in the sticky footer.
+            </li>
+            <li>
+                When you move the mouse, a person should be created with random attributes.
+            </li>
+            <li>
+                The current time should be displayed on the Clock panel.
+            </li>
+            <li>
+                When you click on the "show alert" button, a message should appear.
+            </li>
+            <li>
+                When you click on the "toggle student" button, the panel should be hidden/shown.
+            </li>
+        </ul>
+
+        <div class="jumbotron" id="studentPanel">
+        </div>
+
+        <div class="jumbotron" id="roomPanel">
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Clock</h3>
+            </div>
+            <div class="panel-body" id="clock">
+            </div>
+        </div>
+
+        <p>
+            <a class="btn btn-primary btn-lg active" role="button" id="showAlertButton">Show Alert</a>
+            <a class="btn btn-default btn-lg active" role="button" id="toggleButton">Toggle Student</a>
+        </p>
+
+        <div class="footer">
+          <div class="container">
+            <p class="text-muted" id="stickyFooter">Place sticky footer content here.</p>
+          </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="chance.min.js"></script>
+      
+    <script src="labo1.js"></script>
+  </body>
+</html>
