@@ -1,0 +1,55 @@
+<div id="mynetwork"></div>
+<script type="text/javascript">
+  // create an array with nodes
+  var nodes = [
+        {id: 1, label: 'black node', group: 'objectNodes'},
+        {id: 2, label: 'black node', group: 'ownPropertyNodes'},
+        {id: 3, label: 'black node', group: 'inheritedPropertyNodes'},
+  ];
+  // create an array with edges
+    // create edges
+      edges = [
+      //prototypeEdges
+        {from: 1, to: 2, width: 3, color: 'red', style: 'arrow-center', width:2},
+      //propertyEdges
+        {from: 1, to: 3, width: 1, color: 'green', style: 'line'},
+      ];
+
+    var options = {
+        stabilize: false,
+        nodes: {
+          // default for all nodes
+          shape: 'box',
+        },
+        physics: {barnesHut:{springLength:200}}, // this is the correct way to set the length of the springs
+        groups: {
+          objectNodes: {
+            // defaults for nodes in this group
+            color: {
+                border: 'blue',
+                background: 'lightblue',
+            },
+          },
+          ownPropertyNodes: {
+            color: {
+                border: 'black',
+                background: 'yellow',
+            }
+          },
+          inheritedPropertyNodes: {
+            color: {
+                border: 'grey',
+                background: 'lightgrey',
+            },
+          }
+        }
+      };
+        
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data= {
+    nodes: nodes,
+    edges: edges,
+  };
+  var network = new vis.Network(container, data, options);
+</script>
